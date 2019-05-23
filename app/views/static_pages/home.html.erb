@@ -1,2 +1,13 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<div class="container-fluid my-5" id="home">
+  <h1 class="text-center">¡Reportaxi!</h1>
+
+  <div class="form-group">
+    <%= form_tag do %>
+      <%= label_tag 'aet', 'AET' %>
+      <%= text_field_tag(:aet, 'AET', class: 'form-control') %>
+      <%= submit_tag("Buscar", class: 'btn btn-primary btn-block my-5 btn-lg') %>
+    <% end %>
+  </div>
+
+  <%= link_to 'Reportar', new_report_path, class: 'btn btn-primary btn-block my-5 btn-lg' %>
+</div>
